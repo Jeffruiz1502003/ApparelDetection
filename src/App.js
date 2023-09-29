@@ -90,7 +90,7 @@ loadUser = (data) => {
           .then(response => response.json())
           .then(response => {
             if (response) {
-              fetch('https://mybackend-lqtr.onrender.com:3000/image', {
+              fetch('https://mybackend-lqtr.onrender.com/image', {
               method: 'put',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
