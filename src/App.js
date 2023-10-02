@@ -31,7 +31,7 @@ const initialState = {
       box: {},
       route: 'signin',
       isSignedIn: false,
-      users: {
+      user: {
         id: '',
         name: '',
         email: '',
@@ -46,7 +46,7 @@ class App extends Component {
   }
 
 loadUser = (data) => {
-  this.setState({users: {
+  this.setState({user: {
         id: data.id,
         name: data.name,
         email: data.email,
@@ -94,12 +94,12 @@ loadUser = (data) => {
               method: 'put',
               headers: {'Content-Type': 'application/json'},
               body: JSON.stringify({
-                id: this.state.users.id
+                id: this.state.user.id
               })
             })
               .then(response => response.json())
               .then(count => {
-                this.setState(Object.assign(this.state.users, { entries: count}))
+                this.setState(Object.assign(this.state.user, { entries: count}))
               })
               .catch(console.log)
           }
