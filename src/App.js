@@ -126,7 +126,7 @@ onRouteChange = (route) => {
         { route ==='home' 
           ? <div>
               <Logo />
-              <Rank name={this.state.users.name} entries={this.state.users.entries} />
+              <Rank name={this.state.user.name} entries={this.state.user.entries} />
               <ImageLinkForm  
               onInputChange={this.onInputChange} 
               onButtonSubmit={this.onButtonSubmit}
